@@ -1,8 +1,9 @@
 from django.shortcuts import render
 
 from rest_framework import status
-from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
+from rest_framework.parsers import MultiPartParser
+from rest_framework.generics import GenericAPIView
 
 from .utils import analyze_urine_strip
 from .serializers import ImageUploadSerializer
@@ -15,7 +16,7 @@ class ImageUploadView(GenericAPIView):
     API Endpoint to get urine analysis test
     """
     serializer_class = ImageUploadSerializer
-    
+    parser_classes = [MultiPartParser]
     def post(self, request):
 
         serializer = self.get_serializer(data=request.data)
