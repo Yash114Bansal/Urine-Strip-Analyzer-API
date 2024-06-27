@@ -25,10 +25,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG", False)
+print(DEBUG)
 
 ALLOWED_HOSTS = ["0.0.0.0","127.0.0.1","localhost"]
 
+ALLOWED_HOST = os.getenv("ALLOWED_HOST", None)
+
+if ALLOWED_HOST :
+    ALLOWED_HOSTS.append(ALLOWED_HOST)
+
+CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:8000","http://0.0.0.0:8000"]
+
+CSRF_TRUSTED_ORIGIN = os.getenv("CSRF_TRUSTED_ORIGIN", None)
+
+if CSRF_TRUSTED_ORIGIN :
+    CSRF_TRUSTED_ORIGIN.append(CSRF_TRUSTED_ORIGIN)
 
 # Application definition
 
