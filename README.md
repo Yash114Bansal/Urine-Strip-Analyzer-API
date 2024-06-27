@@ -2,8 +2,8 @@
 
 This involves creating a web interface that allows users to upload an image of their urine strip and identify the colors on the strip. Each strip will have 10 colors, we have to fetch their RGB values.
 
-Hosted Url : (https://urine-strip-analyzer-api.onrender.com/)[https://urine-strip-analyzer-api.onrender.com/]
-Swagger Documentation : (https://urine-strip-analyzer-api.onrender.com/swagger/)[https://urine-strip-analyzer-api.onrender.com/swagger/]
+- Hosted URL: [https://urine-strip-analyzer-api.onrender.com/](https://urine-strip-analyzer-api.onrender.com/)
+- Swagger Documentation: [https://urine-strip-analyzer-api.onrender.com/swagger/](https://urine-strip-analyzer-api.onrender.com/swagger/)
 
 ## Installation
 
